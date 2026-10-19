@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Trabalhe no Mercado Koala — confira as vagas disponíveis e cadastre seu currículo. Junte-se à nossa equipe em Vila Carrão, São Paulo." />
   <title>Trabalhe Conosco — Mercado Koala</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
@@ -14,17 +16,17 @@
   </header>
 
   <nav aria-label="Menu principal">
-    <ul>
-      <li><a href="../index.html">Início</a></li>
-      <li><a href="sobre.html">Quem Somos</a></li>
-      <li><a href="produtos.html">Produtos &amp; Serviços</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="depoimentos.html">Depoimentos</a></li>
-      <li><a href="trabalhe-conosco.html" aria-current="page">Trabalhe Conosco</a></li>
-      <li><a href="parceiros.html">Parceiros</a></li>
-      <li><a href="politica.html">Política de Privacidade</a></li>
-      <li><a href="../orcamento.html">Orçamento</a></li>
-      <li><a href="../contato.html">Contato</a></li>
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+      <li class="nav-item"><a class="nav-link" href="sobre.html">Quem Somos</a></li>
+      <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos &amp; Serviços</a></li>
+      <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+      <li class="nav-item"><a class="nav-link" href="depoimentos.html">Depoimentos</a></li>
+      <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html" aria-current="page">Trabalhe Conosco</a></li>
+      <li class="nav-item"><a class="nav-link" href="parceiros.html">Parceiros</a></li>
+      <li class="nav-item"><a class="nav-link" href="politica.html">Política de Privacidade</a></li>
+      <li class="nav-item"><a class="nav-link" href="../orcamento.html">Orçamento</a></li>
+      <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
     </ul>
   </nav>
 
@@ -253,17 +255,27 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Mercado Koala. Todos os direitos reservados.</p>
-    <address>
+    <div class="rodape-col">
+      <h2>Mercado Koala</h2>
+      <p>Seu mercado de bairro em Vila Carrão, com produtos frescos e atendimento próximo.</p>
+      <p>&copy; 2026 Mercado Koala. Todos os direitos reservados.</p>
+    </div>
+    <div class="rodape-col">
+      <h2>Onde estamos</h2>
+      <address>
       Rua Dr. Cristiano Altenfelder Silva, 515 — Vila Carrão, São Paulo - SP, CEP 03448-010
     </address>
-    <nav aria-label="Links do rodapé">
+    </div>
+    <div class="rodape-col">
+      <h2>Links úteis</h2>
+      <nav aria-label="Links do rodapé">
       <ul>
-        <li><a href="../contato.html">Contato</a></li>
+        <li><a href="contato.html">Contato</a></li>
         <li><a href="politica.html">Política de Privacidade</a></li>
         <li><a href="../orcamento.html">Solicitar Orçamento</a></li>
       </ul>
     </nav>
+    </div>
   </footer>
 
 </body>

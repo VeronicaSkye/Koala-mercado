@@ -1,6 +1,6 @@
 # Mercado Koala — Site de Divulgação
 
-Site institucional desenvolvido como projeto escolar para a disciplina de **Desenvolvimento Frontend para Web** (A2 · 2026.2), sob orientação do Prof. Cid Andrade.
+Site institucional desenvolvido como projeto escolar para a disciplina de **Desenvolvimento Frontend para Web** (A2 · 2026.2), sob orientação do Prof. Cid Andrade. A **Entrega 2** adiciona a identidade visual (CSS) ao site da Entrega 1.
 
 ---
 
@@ -43,6 +43,9 @@ Koala-Anuncio/
 │   ├── trabalhe-conosco.html # Trabalhe Conosco
 │   ├── parceiros.html       # Parceiros & Marcas
 │   └── politica.html        # Política de Privacidade
+├── css/
+│   ├── style.css            # Estilos do Mercado Koala (identidade visual)
+│   └── bootstrap.min.css    # Bootstrap 5.3.3 (somente CSS, hospedado localmente)
 ├── assets/
 │   ├── img/                 # Foto da entrevista com o responsável
 │   ├── audio/               # Áudio de apresentação
@@ -58,7 +61,7 @@ exibido nesta árvore resumida para manter a documentação mais limpa.
 
 ## 🔗 Link do Site Hospedado
 
-O site será publicado em: **https://marcelooll.github.io/Koala-Anuncio/**
+O site será publicado em: **https://veronicaskye.github.io/Koala-mercado/**
 
 O deploy está configurado para ocorrer automaticamente a cada atualização da branch `main`.
 Para ativar pela primeira vez, acesse **Settings > Pages** no GitHub e selecione **GitHub Actions** como fonte de publicação.
@@ -116,6 +119,56 @@ As tags `<audio>` e `<video>` estão incorporadas na página `paginas/produtos.h
 
 ---
 
+## 🎨 Entrega 2 — Como o CSS foi feito
+
+### Objetivo e inspiração
+
+O visual foi inspirado na estrutura de um site de supermercado online (cabeçalho com marca à esquerda,
+barra de departamentos, vitrines em cards e rodapé em colunas), mas **sem JavaScript e sem imagens**,
+usando apenas HTML e CSS e a paleta do koala: **azul claro mesclado com cinza claro**.
+
+### Passo a passo
+
+1. **Análise do HTML existente.** As 10 páginas já eram semânticas (`header`, `nav`, `main`, `section`,
+   `article`, `footer`). Por isso o CSS foi escrito sobre essas tags, sem espalhar classes no HTML.
+2. **Paleta com variáveis CSS** (`:root` em `css/style.css`): azul claro `#a9d6f0`, azul médio `#6fb7e3`,
+   azul escuro `#2f6f9f`, cinzas `#eef1f4`, `#cfd6dd` e `#4a5560`. Mudar uma cor muda o site inteiro.
+3. **Bootstrap simples apenas no menu.** Foi usado só o **CSS** do Bootstrap 5.3.3 (arquivo local em
+   `css/bootstrap.min.css`, sem CDN e sem o JavaScript do Bootstrap). O menu recebeu as classes
+   `nav nav-pills justify-content-center`, `nav-item` e `nav-link`, e o `style.css` transforma essas
+   "pílulas" em uma barra de departamentos azul clara com links em maiúsculas.
+4. **Cabeçalho:** fundo branco, marca à esquerda, slogan e endereço ao lado e uma faixa azul no topo.
+5. **Menu fixo (`position: sticky`)** com a página atual destacada via `aria-current="page"`
+   (a mesma marcação de acessibilidade já existente).
+6. **Seções e cards:** `section` virou cartão branco com borda azul lateral; seções com `article` viram
+   uma vitrine em **CSS Grid** (`repeat(auto-fit, minmax(240px, 1fr))`) com efeito de elevação no `:hover`.
+7. **Tabelas, formulários e botões:** cabeçalho de tabela azul, linhas zebradas, campos com foco azul
+   (`:focus`), botões arredondados e botão "Limpar" em cinza.
+8. **Rodapé com informações:** reorganizado em 3 colunas (Mercado Koala, Onde estamos, Links úteis) em
+   todas as páginas, com degradê cinza para azul. No celular as colunas se empilham sozinhas.
+9. **Página inicial:** foram adicionadas uma faixa de benefícios (produtos frescos, Pix/débito/crédito,
+   estacionamento, preços justos) e a seção "Nossos Departamentos".
+10. **Responsividade:** `meta viewport`, grids `auto-fit` e uma `@media (max-width: 576px)` que ajusta
+    espaçamentos e desativa o menu fixo em telas pequenas.
+11. **Correções de navegação:** os links do menu, do rodapé e dos textos foram ajustados para os caminhos
+    corretos na raiz e em `paginas/` (`../` nas páginas internas). Foi conferido por script que todos os
+    links locais apontam para arquivos existentes.
+12. **Consistência de conteúdo:** o horário de segunda a sexta foi padronizado em 07h–21h
+    (contato, FAQ e página inicial agora concordam).
+
+### Técnicas de CSS utilizadas
+
+Variáveis CSS, Flexbox (cabeçalho, corpo da página), CSS Grid (vitrines, rodapé, benefícios), `position: sticky`,
+gradientes lineares, `:hover` / `:focus` / `:nth-child`, `:has()`, `clamp()`, transições e media queries.
+
+### Limitações conhecidas
+
+- O mapa da página inicial é um `iframe` do Google Maps e precisa de internet.
+- O número de WhatsApp ainda não existe e aparece como "em breve".
+- Não há campo de busca porque, sem JavaScript, ele não teria função.
+
+---
+
 ## ✅ Checklist da Entrega 1
 
 - [x] 10 páginas HTML interligadas (index, contato, orçamento + 7 de conteúdo)
@@ -138,7 +191,7 @@ O principal aprendizado foi perceber que uma boa estrutura HTML — mesmo sem ne
 
 Os desafios envolveram principalmente o gerenciamento correto dos caminhos relativos entre arquivos em diferentes pastas e a atenção aos atributos de acessibilidade (`aria-*`). O grupo se organizou bem para dividir as páginas e manter um padrão consistente em todas elas.
 
-Para a Entrega 2, o plano é incorporar o CSS com identidade visual inspirada no nome "Koala" e nas cores do mercado, além de adicionar os arquivos reais de áudio e vídeo.
+Na Entrega 2 foi incorporado o CSS com a identidade visual do Koala (azul claro e cinza claro). Ainda falta substituir os arquivos placeholder de áudio e vídeo pelos reais.
 
 ---
 

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mercado Koala — Seu mercado de bairro em Vila Carrão, São Paulo. Encontre produtos frescos, promoções e atendimento de qualidade perto de você." />
   <title>Mercado Koala — Página Inicial</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -17,21 +19,42 @@
   </header>
 
   <nav aria-label="Menu principal">
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="paginas/sobre.html">Quem Somos</a></li>
-      <li><a href="paginas/produtos.html">Produtos &amp; Serviços</a></li>
-      <li><a href="paginas/faq.html">FAQ</a></li>
-      <li><a href="paginas/depoimentos.html">Depoimentos</a></li>
-      <li><a href="paginas/trabalhe-conosco.html">Trabalhe Conosco</a></li>
-      <li><a href="paginas/parceiros.html">Parceiros</a></li>
-      <li><a href="paginas/politica.html">Política de Privacidade</a></li>
-      <li><a href="orcamento.html">Orçamento</a></li>
-      <li><a href="contato.html">Contato</a></li>
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+      <li class="nav-item"><a class="nav-link" href="paginas/sobre.html">Quem Somos</a></li>
+      <li class="nav-item"><a class="nav-link" href="paginas/produtos.html">Produtos &amp; Serviços</a></li>
+      <li class="nav-item"><a class="nav-link" href="paginas/faq.html">FAQ</a></li>
+      <li class="nav-item"><a class="nav-link" href="paginas/depoimentos.html">Depoimentos</a></li>
+      <li class="nav-item"><a class="nav-link" href="paginas/trabalhe-conosco.html">Trabalhe Conosco</a></li>
+      <li class="nav-item"><a class="nav-link" href="paginas/parceiros.html">Parceiros</a></li>
+      <li class="nav-item"><a class="nav-link" href="paginas/politica.html">Política de Privacidade</a></li>
+      <li class="nav-item"><a class="nav-link" href="orcamento.html">Orçamento</a></li>
+      <li class="nav-item"><a class="nav-link" href="paginas/contato.html">Contato</a></li>
     </ul>
   </nav>
 
   <main>
+
+    <section class="faixa-beneficios" aria-label="Benefícios do Mercado Koala">
+      <ul>
+        <li><strong>Produtos frescos</strong> todos os dias</li>
+        <li><strong>Pix, débito e crédito</strong> aceitos</li>
+        <li><strong>Estacionamento</strong> para clientes</li>
+        <li><strong>Preços justos</strong> no seu bairro</li>
+      </ul>
+    </section>
+
+    <section class="departamentos" aria-labelledby="departamentos-titulo">
+      <h2 id="departamentos-titulo">Nossos Departamentos</h2>
+      <ul>
+        <li>Hortifrúti</li>
+        <li>Açougue</li>
+        <li>Padaria</li>
+        <li>Laticínios</li>
+        <li>Mercearia</li>
+        <li>Bebidas</li>
+      </ul>
+    </section>
 
     <section aria-labelledby="boas-vindas-titulo">
       <h2 id="boas-vindas-titulo">Bem-vindo ao Mercado Koala!</h2>
@@ -87,7 +110,7 @@
         <tbody>
           <tr>
             <td>Segunda a Sexta</td>
-            <td>07h00 às 20h00</td>
+            <td>07h00 às 21h00</td>
           </tr>
           <tr>
             <td>Sábado</td>
@@ -140,17 +163,27 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Mercado Koala. Todos os direitos reservados.</p>
-    <address>
+    <div class="rodape-col">
+      <h2>Mercado Koala</h2>
+      <p>Seu mercado de bairro em Vila Carrão, com produtos frescos e atendimento próximo.</p>
+      <p>&copy; 2026 Mercado Koala. Todos os direitos reservados.</p>
+    </div>
+    <div class="rodape-col">
+      <h2>Onde estamos</h2>
+      <address>
       Rua Dr. Cristiano Altenfelder Silva, 515 — Vila Carrão, São Paulo - SP, CEP 03448-010
     </address>
-    <nav aria-label="Links do rodapé">
+    </div>
+    <div class="rodape-col">
+      <h2>Links úteis</h2>
+      <nav aria-label="Links do rodapé">
       <ul>
-        <li><a href="contato.html">Contato</a></li>
+        <li><a href="paginas/contato.html">Contato</a></li>
         <li><a href="paginas/politica.html">Política de Privacidade</a></li>
         <li><a href="orcamento.html">Solicitar Orçamento</a></li>
       </ul>
     </nav>
+    </div>
   </footer>
 
 </body>
