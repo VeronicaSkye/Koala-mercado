@@ -167,6 +167,7 @@ gradientes lineares, `:hover` / `:focus` / `:nth-child`, `:has()`, `clamp()`, tr
 - Não há campo de busca porque, sem JavaScript, ele não teria função.
 
 ---
+assets/img/entrevista-responsavel.jpg e exibida na página paginas/sobre.html.
 
 ## ✅ Checklist da Entrega 1
 
