@@ -80,7 +80,6 @@ A entrevista foi realizada de forma presencial, com visita ao mercado para colet
 
 > 📷 **Foto comprobatória do contato com o responsável:** disponível em `assets/img/entrevista-responsavel.jpg` e exibida na página `paginas/sobre.html`.
 
-![Foto do contato com o responsável pelo Mercado Koala](assets/img/entrevista-responsavel.jpg)
 
 ### Processo de Desenvolvimento
 
